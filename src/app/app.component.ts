@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SwapScrollService} from "./swap-scroll.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'swap-scroll';
+  scrollDisabled = false;
+  constructor(private scrollService: SwapScrollService) {
+  }
+
+  enableScroll() {
+    this.scrollService.enableScroll();
+  }
+
+  disableScroll(){
+    this.scrollService.disableScroll();
+  }
 }

@@ -1,0 +1,8 @@
+main{
+  height:100%;
+  overflow-y: scroll;
+}
+
+main > div {
+  height: 100px;
+}
