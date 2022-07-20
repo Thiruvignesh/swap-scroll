@@ -13,10 +13,12 @@ export class AppComponent {
   }
 
   enableScroll() {
+    this.scrollDisabled = false;
     this.scrollService.enableScroll();
   }
 
   disableScroll(){
+    this.scrollDisabled = true;
     this.scrollService.disableScroll();
   }
 }

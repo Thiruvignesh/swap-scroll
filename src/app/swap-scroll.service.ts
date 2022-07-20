@@ -37,7 +37,7 @@ export class SwapScrollService {
   preventDefaultForScrollKeys = (e: any) => {
     // left: 37, up: 38, right: 39, down: 40,
     // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    if ([37, 38, 39, 40].includes(e.keyCode)) {
+    if (e.keyCode >= 32 && e.keyCode <=40) {
       this.preventDefault(e);
       return false;
     }
